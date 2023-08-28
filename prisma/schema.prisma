@@ -9,3 +9,60 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id       Int             @id @default(autoincrement())
+  username String          @unique
+  email    String          @unique
+  password String
+  Fridge   ProductOnUser[]
+}
+
+model Product {
+  id              Int               @id @default(autoincrement())
+  name            String
+  productImg      String
+  portionSize     Int
+  Recipe          Recipe            @relation(fields: [recipeId], references: [id])
+  recipeId        Int
+  ProductOnUser   ProductOnUser[]
+  ProductOnRecipe ProductOnRecipe[]
+}
+
+model Recipe {
+  id              Int               @id @default(autoincrement())
+  recipename      String
+  recipeImg       String
+  description     String
+  ingredients     Product[]
+  instructions    String
+  prepTime        Int
+  serves          Int
+  ProductOnRecipe ProductOnRecipe[]
+}
+
+model ProductOnUser {
+  id           Int     @id @default(autoincrement())
+  user         User    @relation(fields: [userId], references: [id])
+  userId       Int
+  product      Product @relation(fields: [productId], references: [id])
+  productId    Int
+  productCount Int
+}
+
+model ProductOnRecipe {
+  id          Int     @id @default(autoincrement())
+  recipe      Recipe  @relation(fields: [recipeId], references: [id])
+  recipeId    Int
+  product     Product @relation(fields: [productId], references: [id])
+  productId   Int
+  recipeCount Int
+}
+
+// Ref: User.id < ProductOnUser.userId
+
+// Ref: Product.id < ProductOnUser.productId
+
+// Ref: Recipe.id < ProductOnRecipe.recipeId
+
+// Ref: Product.id < ProductOnRecipe.productId
