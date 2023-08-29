@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "username": "Arazion",
+    "email": "jl_sanchez@live.nl",
+    "password": "user1234",
+    "userImg": "https://i.ytimg.com/vi/pJd52kkNP3Q/maxresdefault.jpg",
+    "Fridge": {
+      "connect": [{ "id": 1 }, { "id": 2 }, { "id": 3 }, { "id": 4 }]
+    }
+  }
+]

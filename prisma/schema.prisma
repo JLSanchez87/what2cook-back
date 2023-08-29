@@ -15,30 +15,35 @@ model User {
   username String          @unique
   email    String          @unique
   password String
+  userImg  String
   Fridge   ProductOnUser[]
 }
 
 model Product {
   id              Int               @id @default(autoincrement())
-  name            String
-  productImg      String
+  productname     String
   portionSize     Int
-  Recipe          Recipe            @relation(fields: [recipeId], references: [id])
-  recipeId        Int
-  ProductOnUser   ProductOnUser[]
   ProductOnRecipe ProductOnRecipe[]
+  ProductOnUser   ProductOnUser[]
 }
 
 model Recipe {
-  id              Int               @id @default(autoincrement())
-  recipename      String
-  recipeImg       String
-  description     String
-  ingredients     Product[]
-  instructions    String
-  prepTime        Int
-  serves          Int
-  ProductOnRecipe ProductOnRecipe[]
+  id           Int               @id @default(autoincrement())
+  recipename   String
+  recipeImg    String
+  description  String
+  instructions String
+  prepTime     Int
+  serves       Int
+  category     Category[]
+  ingredients  ProductOnRecipe[]
+}
+
+model Category {
+  id           Int      @id @default(autoincrement())
+  categoryname String
+  categoryImg  String
+  recipe       Recipe[]
 }
 
 model ProductOnUser {
@@ -58,11 +63,3 @@ model ProductOnRecipe {
   productId   Int
   recipeCount Int
 }
-
-// Ref: User.id < ProductOnUser.userId
-
-// Ref: Product.id < ProductOnUser.productId
-
-// Ref: Recipe.id < ProductOnRecipe.recipeId
-
-// Ref: Product.id < ProductOnRecipe.productId

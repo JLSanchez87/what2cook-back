@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "recipeId": 1,
+    "productId": 5,
+    "recipeCount": 1
+  },
+  {
+    "id": 2,
+    "recipeId": 1,
+    "productId": 22,
+    "recipeCount": 2
+  },
+  {
+    "id": 3,
+    "recipeId": 1,
+    "productId": 24,
+    "recipeCount": 1
+  },
+  {
+    "id": 4,
+    "recipeId": 1,
+    "productId": 172,
+    "recipeCount": 4
+  }
+]

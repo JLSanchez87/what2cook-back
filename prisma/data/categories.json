@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "categoryname": "Indian",
+    "categoryImg": "indian_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 2,
+    "categoryname": "Italian",
+    "categoryImg": "italian_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 3,
+    "categoryname": "Asian",
+    "categoryImg": "asian_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 4,
+    "categoryname": "Mexican",
+    "categoryImg": "mexican_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 5,
+    "categoryname": "Filipino",
+    "categoryImg": "filipino_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 6,
+    "categoryname": "Mediterranean",
+    "categoryImg": "mediterranean_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 7,
+    "categoryname": "American",
+    "categoryImg": "american_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 8,
+    "categoryname": "Latin American",
+    "categoryImg": "latin_american_cuisine.jpg",
+    "recipe": []
+  },
+  {
+    "id": 9,
+    "categoryname": "Comfort Food",
+    "categoryImg": "comfort_food.jpg",
+    "recipe": []
+  },
+  {
+    "id": 10,
+    "categoryname": "Vegetarian",
+    "categoryImg": "vegetarian_cuisine.jpg",
+    "recipe": []
+  }
+]

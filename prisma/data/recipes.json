@@ -1,0 +1,427 @@
+[
+  {
+    "id": 1,
+    "recipename": "Pasta Carbonara",
+    "recipeImg": "pasta_carbonara.jpg",
+    "description": "Classic Italian pasta dish with eggs, cheese, and bacon.",
+    "instructions": "Cook pasta. Mix cooked pasta with beaten eggs, grated cheese, and cooked bacon. Serve immediately.",
+    "prepTime": 15,
+    "serves": 4,
+    "category": { "connect": [{ "id": 1 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 5, "productname": "Pasta", "recipeCount": 1 },
+        { "id": 22, "productname": "Eggs", "recipeCount": 2 },
+        { "id": 24, "productname": "Cheese", "recipeCount": 1 },
+        { "id": 172, "productname": "Bacon", "recipeCount": 4 }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "recipename": "Stir-Fried Noodles",
+    "recipeImg": "stir_fried_noodles.jpg",
+    "description": "Asian-style stir-fried noodles with vegetables and your choice of protein.",
+    "instructions": "Cook noodles. Stir-fry noodles with chopped vegetables and your choice of protein. Season with soy sauce. Serve hot.",
+    "prepTime": 20,
+    "serves": 3,
+    "category": { "connect": [{ "id": 3 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 174, "productname": "Noodles", "recipeCount": 1 },
+        { "id": 173, "productname": "Vegetables", "recipeCount": 2 },
+        { "id": 10, "productname": "Soy Sauce", "recipeCount": 1 },
+        {
+          "id": 60,
+          "productname": "Chicken Breast",
+          "recipeCount": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "recipename": "Tacos",
+    "recipeImg": "tacos.jpg",
+    "description": "Mexican-style tacos filled with seasoned meat and toppings.",
+    "instructions": "Cook and season meat. Fill tortillas with cooked meat and desired toppings like lettuce, cheese, and salsa. Enjoy!",
+    "prepTime": 30,
+    "serves": 4,
+    "category": { "connect": [{ "id": 4 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 175, "productname": "Tortillas", "recipeCount": 1 },
+        { "id": 62, "productname": "Ground Beef", "recipeCount": 1 },
+        { "id": 114, "productname": "Lettuce", "recipeCount": 1 },
+        { "id": 24, "productname": "Cheese", "recipeCount": 1 },
+        { "id": 176, "productname": "Salsa", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "recipename": "Greek Salad",
+    "recipeImg": "greek_salad.jpg",
+    "description": "Refreshing Mediterranean salad with fresh veggies and feta cheese.",
+    "instructions": "Chop vegetables and mix with olives and feta cheese. Drizzle with olive oil and lemon juice. Toss and serve.",
+    "prepTime": 15,
+    "serves": 2,
+    "category": { "connect": [{ "id": 6 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 114, "productname": "Lettuce", "recipeCount": 1 },
+        { "id": 112, "productname": "Cucumber", "recipeCount": 1 },
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 1 },
+        { "id": 177, "productname": "Olives", "recipeCount": 1 },
+        { "id": 168, "productname": "Feta Cheese", "recipeCount": 1 },
+        { "id": 6, "productname": "Olive Oil", "recipeCount": 1 },
+        { "id": 183, "productname": "Lemon Juice", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "recipename": "Macaroni and Cheese",
+    "recipeImg": "macaroni_cheese.jpg",
+    "description": "Classic American comfort food made with macaroni and a creamy cheese sauce.",
+    "instructions": "Cook macaroni. Make a cheese sauce with milk, butter, and cheddar cheese. Mix with cooked macaroni and bake until golden.",
+    "prepTime": 25,
+    "serves": 6,
+    "category": { "connect": [{ "id": 7 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 178, "productname": "Macaroni", "recipeCount": 1 },
+        { "id": 23, "productname": "Milk", "recipeCount": 1 },
+        { "id": 25, "productname": "Butter", "recipeCount": 1 },
+        { "id": 24, "productname": "Cheese", "recipeCount": 2 }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "recipename": "Chicken Stir-Fry",
+    "recipeImg": "chicken_stirfry.jpg",
+    "description": "Quick and flavorful chicken stir-fry with vegetables.",
+    "instructions": "Sauté chicken and vegetables. Add stir-fry sauce. Serve with rice.",
+    "prepTime": 20,
+    "serves": 3,
+    "category": { "connect": [{ "id": 3 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 60, "productname": "Chicken Breast", "recipeCount": 2 },
+        { "id": 26, "productname": "Frozen Vegetables", "recipeCount": 2 },
+        { "id": 10, "productname": "Soy Sauce", "recipeCount": 1 },
+        { "id": 3, "productname": "Rice", "recipeCount": 2 }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "recipename": "Caprese Salad",
+    "recipeImg": "caprese_salad.jpg",
+    "description": "Refreshing Italian salad with tomatoes, mozzarella, and basil.",
+    "instructions": "Slice tomatoes and mozzarella. Arrange with basil leaves. Drizzle with olive oil and balsamic vinegar.",
+    "prepTime": 10,
+    "serves": 2,
+    "category": { "connect": [{ "id": 2 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 2 },
+        { "id": 165, "productname": "Mozzarella Cheese", "recipeCount": 4 },
+        { "id": 179, "productname": "Basil", "recipeCount": 1 },
+        { "id": 6, "productname": "Olive Oil", "recipeCount": 1 },
+        { "id": 8, "productname": "Vinegar", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "recipename": "Margherita Pizza",
+    "recipeImg": "margherita_pizza.jpg",
+    "description": "Classic Italian pizza with tomatoes, mozzarella, and basil.",
+    "instructions": "Spread tomato sauce on pizza dough. Top with mozzarella cheese, sliced tomatoes, and fresh basil leaves. Bake until crust is golden and cheese is melted.",
+    "prepTime": 15,
+    "serves": 2,
+    "category": { "connect": [{ "id": 2 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 180, "productname": "Pizza Dough", "recipeCount": 1 },
+        { "id": 181, "productname": "Tomato Sauce", "recipeCount": 1 },
+        { "id": 165, "productname": "Mozzarella Cheese", "recipeCount": 2 },
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 2 },
+        { "id": 179, "productname": "Basil", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "recipename": "Bruschetta",
+    "recipeImg": "bruschetta.jpg",
+    "description": "Classic Italian appetizer with diced tomatoes, garlic, and basil on toasted bread.",
+    "instructions": "Toast slices of bread. Rub with garlic. Top with diced tomatoes, olive oil, and fresh basil. Season with salt and pepper.",
+    "prepTime": 10,
+    "serves": 4,
+    "category": { "connect": [{ "id": 2 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 182, "productname": "Bread Slices", "recipeCount": 4 },
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 2 },
+        { "id": 34, "productname": "Garlic", "recipeCount": 1 },
+        { "id": 179, "productname": "Basil", "recipeCount": 1 },
+        { "id": 6, "productname": "Olive Oil", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "recipename": "Fried Rice",
+    "recipeImg": "fried_rice.jpg",
+    "description": "Stir-fried rice with vegetables, soy sauce, and scrambled eggs or diced chicken.",
+    "instructions": "Stir-fry cooked rice with vegetables, soy sauce, and scrambled eggs or diced chicken. Season with salt and pepper to taste.",
+    "prepTime": 20,
+    "serves": 4,
+    "category": { "connect": [{ "id": 3 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 3, "productname": "Rice", "recipeCount": 2 },
+        { "id": 173, "productname": "Vegetables", "recipeCount": 2 },
+        { "id": 10, "productname": "Soy Sauce", "recipeCount": 1 },
+        { "id": 22, "productname": "Eggs", "recipeCount": 2 },
+        { "id": 60, "productname": "Chicken Breast", "recipeCount": 2 }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "recipename": "Teriyaki Salmon",
+    "recipeImg": "teriyaki_salmon.jpg",
+    "description": "Grilled or baked salmon marinated in a teriyaki sauce with soy sauce, honey, and ginger.",
+    "instructions": "Marinate salmon in a mixture of soy sauce, honey, and ginger. Grill or bake until cooked through. Serve with extra teriyaki sauce if desired.",
+    "prepTime": 15,
+    "serves": 2,
+    "category": { "connect": [{ "id": 3 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 85, "productname": "Salmon Fillet", "recipeCount": 2 },
+        { "id": 10, "productname": "Soy Sauce", "recipeCount": 1 },
+        { "id": 11, "productname": "Honey", "recipeCount": 1 },
+        { "id": 9, "productname": "Ginger", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "recipename": "Guacamole",
+    "recipeImg": "guacamole.jpg",
+    "description": "Mashed avocados mixed with diced tomatoes, onions, lime juice, and cilantro. Served with tortilla chips.",
+    "instructions": "Mash avocados and mix with diced tomatoes, onions, lime juice, and cilantro. Season with salt and pepper to taste. Serve with tortilla chips.",
+    "prepTime": 15,
+    "serves": 4,
+    "category": { "connect": [{ "id": 4 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 131, "productname": "Avocado", "recipeCount": 2 },
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 1 },
+        { "id": 33, "productname": "Onions", "recipeCount": 1 },
+        { "id": 36, "productname": "Lime Juice", "recipeCount": 1 },
+        { "id": 135, "productname": "Cilantro", "recipeCount": 1 },
+        { "id": 37, "productname": "Tortilla Chips", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "recipename": "Rice and Beans",
+    "recipeImg": "rice_and_beans.jpg",
+    "description": "Combination of cooked rice and canned beans seasoned with spices like cumin and chili powder.",
+    "instructions": "Combine cooked rice and canned beans. Season with spices like cumin and chili powder. Heat until warmed through. Serve as a side dish or main course.",
+    "prepTime": 20,
+    "serves": 4,
+    "category": { "connect": [{ "id": 8 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 3, "productname": "Rice", "recipeCount": 2 },
+        { "id": 13, "productname": "Canned Beans", "recipeCount": 1 },
+        { "id": 113, "productname": "Cumin", "recipeCount": 1 },
+        { "id": 184, "productname": "Chili Powder", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "recipename": "Hummus Wrap",
+    "recipeImg": "hummus_wrap.jpg",
+    "description": "Spread hummus on a tortilla, add sliced veggies, and roll up into a wrap.",
+    "instructions": "Spread hummus evenly on a tortilla. Layer with sliced veggies of your choice such as cucumbers, bell peppers, and carrots. Roll up the tortilla tightly to create a wrap. Cut in half if desired and serve.",
+    "prepTime": 10,
+    "serves": 1,
+    "category": { "connect": [{ "id": 6 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 185, "productname": "Hummus", "recipeCount": 2 },
+        { "id": 175, "productname": "Tortilla", "recipeCount": 1 },
+        { "id": 112, "productname": "Cucumbers", "recipeCount": 1 },
+        { "id": 109, "productname": "Bell Peppers", "recipeCount": 1 },
+        { "id": 108, "productname": "Carrots", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "recipename": "Grilled Chicken with Tzatziki",
+    "recipeImg": "grilled_chicken_tzatziki.jpg",
+    "description": "Marinated chicken grilled to perfection and served with homemade tzatziki sauce.",
+    "instructions": "Marinate chicken in a mixture of olive oil, herbs (such as oregano and thyme), garlic, salt, and pepper. Grill chicken until cooked through. Serve with homemade tzatziki sauce.",
+    "prepTime": 30,
+    "serves": 2,
+    "category": { "connect": [{ "id": 6 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 60, "productname": "Chicken Breast", "recipeCount": 2 },
+        { "id": 6, "productname": "Olive Oil", "recipeCount": 1 },
+        { "id": 49, "productname": "Dried Herbs and Spices", "recipeCount": 1 },
+        { "id": 34, "productname": "Garlic", "recipeCount": 1 },
+        { "id": 51, "productname": "Tzatziki Sauce", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "recipename": "Chicken Pot Pie",
+    "recipeImg": "chicken_pot_pie.jpg",
+    "description": "A comforting dish with a filling of cooked chicken, frozen vegetables, and a creamy sauce, topped with a golden pie crust.",
+    "instructions": "In a skillet, cook diced chicken until no longer pink. Add frozen mixed vegetables and cook until heated through. Prepare a creamy sauce with ingredients like butter, flour, milk, and chicken broth. Combine the sauce with the chicken and vegetables. Pour the mixture into a pie dish, top with a pie crust, and bake in the oven until the crust is golden and the filling is bubbling.",
+    "prepTime": 45,
+    "serves": 4,
+    "category": { "connect": [{ "id": 9 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 60, "productname": "Chicken Breast", "recipeCount": 2 },
+        { "id": 26, "productname": "Frozen Vegetables", "recipeCount": 1 },
+        { "id": 25, "productname": "Butter", "recipeCount": 1 },
+        { "id": 1, "productname": "Flour", "recipeCount": 1 },
+        { "id": 23, "productname": "Milk", "recipeCount": 1 },
+        { "id": 42, "productname": "Chicken Broth", "recipeCount": 1 },
+        { "id": 83, "productname": "Pie Crust", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "recipename": "Homemade Burgers",
+    "recipeImg": "homemade_burgers.jpg",
+    "description": "Juicy ground beef patties grilled or cooked in a pan, served on buns with a variety of toppings.",
+    "instructions": "Season ground beef with salt and pepper, then shape into burger patties. Grill the patties over medium heat until cooked to your desired level of doneness. Toast burger buns on the grill. Assemble the burgers with lettuce, tomato slices, cheese, onions, and condiments of your choice. Serve the burgers with side dishes like fries or salad.",
+    "prepTime": 30,
+    "serves": 4,
+    "category": { "connect": [{ "id": 7 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 62, "productname": "Ground Beef", "recipeCount": 1 },
+        { "id": 17, "productname": "Buns", "recipeCount": 4 },
+        { "id": 114, "productname": "Lettuce", "recipeCount": 1 },
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 1 },
+        { "id": 24, "productname": "Cheese", "recipeCount": 1 },
+        { "id": 33, "productname": "Onions", "recipeCount": 1 },
+        { "id": 53, "productname": "Condiments", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "recipename": "Chicken Adobo",
+    "recipeImg": "chicken_adobo.jpg",
+    "description": "A classic Filipino dish featuring chicken simmered in a flavorful mixture of soy sauce, vinegar, and spices.",
+    "instructions": "In a pot, combine chicken pieces, soy sauce, vinegar, garlic, bay leaves, black peppercorns, and water. Bring to a boil, then lower the heat and simmer until the chicken is tender and fully cooked. Remove the chicken from the pot. For the sauce, you can reduce and thicken the liquid or strain it to remove solids. Serve the chicken and sauce over steamed rice.",
+    "prepTime": 20,
+    "serves": 4,
+    "category": { "connect": [{ "id": 5 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 60, "productname": "Chicken Breast", "recipeCount": 4 },
+        { "id": 10, "productname": "Soy Sauce", "recipeCount": 1 },
+        { "id": 8, "productname": "Vinegar", "recipeCount": 1 },
+        { "id": 34, "productname": "Garlic", "recipeCount": 1 },
+        { "id": 124, "productname": "Bay Leaves", "recipeCount": 2 },
+        { "id": 125, "productname": "Black Peppercorns", "recipeCount": 1 },
+        { "id": 3, "productname": "Rice", "recipeCount": 4 }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "recipename": "Chicken Curry",
+    "recipeImg": "chicken_curry.jpg",
+    "description": "A flavorful and aromatic Indian chicken curry made with a blend of spices, tomatoes, and onions.",
+    "instructions": "In a pan, sauté onions and spices until fragrant. Add tomatoes and cook until they soften. Add chicken pieces and cook until browned. Pour in coconut milk or yogurt and simmer until the chicken is cooked through. Garnish with fresh cilantro and serve with rice or naan.",
+    "prepTime": 25,
+    "serves": 4,
+    "category": { "connect": [{ "id": 1 }] },
+    "ingredients": {
+      "connect": [
+        { "id": 94, "productname": "Chicken Thighs", "recipeCount": 4 },
+        { "id": 33, "productname": "Onions", "recipeCount": 2 },
+        { "id": 150, "productname": "Tomatoes", "recipeCount": 2 },
+        {
+          "id": 49,
+          "productname": "Dried Herbs and Spices",
+          "recipeCount": 1
+        },
+        { "id": 55, "productname": "Canned Coconut Milk", "recipeCount": 1 },
+        { "id": 135, "productname": "Cilantro", "recipeCount": 1 },
+        { "id": 3, "productname": "Rice", "recipeCount": 4 }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "recipename": "Vegetable Biryani",
+    "recipeImg": "vegetable_biryani.jpg",
+    "description": "A fragrant and flavorful Indian rice dish made with basmati rice, mixed vegetables, and aromatic spices.",
+    "instructions": "Sauté spices, onions, and mixed vegetables. Add soaked basmati rice and water. Cook until the rice is tender. Layer the rice and vegetable mixture, and steam until fully cooked. Garnish with fried onions, cashews, and fresh herbs.",
+    "prepTime": 30,
+    "serves": 6,
+    "category": { "connect": [{ "id": 1 }] },
+    "ingredients": {
+      "connect": [
+        { "productname": "Basmati Rice", "recipeCount": 2 },
+        {
+          "id": 173,
+          "productname": "Vegetables",
+          "recipeCount": 2
+        },
+        {
+          "id": 49,
+          "productname": "Dried Herbs and Spices",
+          "recipeCount": 1
+        },
+        { "id": 33, "productname": "Onions", "recipeCount": 2 },
+        { "id": 111, "productname": "Fried Onions", "recipeCount": 1 },
+        { "id": 123, "productname": "Cashews", "recipeCount": 1 },
+        { "id": 50, "productname": "Fresh Herbs and Spices", "recipeCount": 1 }
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "recipename": "Chana Masala",
+    "recipeImg": "chana_masala.jpg",
+    "description": "A popular North Indian dish made with chickpeas cooked in a spicy tomato and onion gravy.",
+    "instructions": "Sauté onions and spices until golden. Add tomatoes and cook until they break down. Add chickpeas and cook in the tomato gravy. Garnish with fresh cilantro and serve with rice or naan.",
+    "prepTime": 25,
+    "serves": 4,
+    "category": { "connect": [{ "id": 1 }] },
+    "ingredients": [
+      { "id": 71, "productname": "Canned Chickpeas", "recipeCount": 2 },
+      { "id": 33, "productname": "Onions", "recipeCount": 2 },
+      { "id": 150, "productname": "Tomatoes", "recipeCount": 2 },
+      {
+        "id": 50,
+        "productname": "Fresh Herbs and Spices",
+        "recipeCount": 1
+      },
+      { "id": 135, "productname": "Cilantro", "recipeCount": 1 },
+      { "id": 4, "productname": "Naan", "recipeCount": 4 }
+    ]
+  }
+]
