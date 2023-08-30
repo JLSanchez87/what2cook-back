@@ -2,61 +2,52 @@
   {
     "id": 1,
     "categoryname": "Indian",
-    "categoryImg": "indian_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "indian_cuisine.jpg"
   },
   {
     "id": 2,
     "categoryname": "Italian",
-    "categoryImg": "italian_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "italian_cuisine.jpg"
   },
   {
     "id": 3,
+
     "categoryname": "Asian",
-    "categoryImg": "asian_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "asian_cuisine.jpg"
   },
   {
     "id": 4,
     "categoryname": "Mexican",
-    "categoryImg": "mexican_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "mexican_cuisine.jpg"
   },
   {
     "id": 5,
     "categoryname": "Filipino",
-    "categoryImg": "filipino_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "filipino_cuisine.jpg"
   },
   {
     "id": 6,
     "categoryname": "Mediterranean",
-    "categoryImg": "mediterranean_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "mediterranean_cuisine.jpg"
   },
   {
     "id": 7,
     "categoryname": "American",
-    "categoryImg": "american_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "american_cuisine.jpg"
   },
   {
     "id": 8,
     "categoryname": "Latin American",
-    "categoryImg": "latin_american_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "latin_american_cuisine.jpg"
   },
   {
     "id": 9,
     "categoryname": "Comfort Food",
-    "categoryImg": "comfort_food.jpg",
-    "recipe": []
+    "categoryImg": "comfort_food.jpg"
   },
   {
     "id": 10,
     "categoryname": "Vegetarian",
-    "categoryImg": "vegetarian_cuisine.jpg",
-    "recipe": []
+    "categoryImg": "vegetarian_cuisine.jpg"
   }
 ]
