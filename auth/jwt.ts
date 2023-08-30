@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import { JwtPayload } from "jsonwebtoken";
-const secret = "from-russia-with-love"; // This can be any random string, longer is better (safer)
+const secret = "lasdkfjhaviaeuyrf3fadsf8usv";
 
 interface TokenInfo extends JwtPayload {
   userId: number;
