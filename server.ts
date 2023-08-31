@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client";
-import express, { json } from "express";
 import cors from "cors";
+import express, { json } from "express";
+import { PrismaClient } from "@prisma/client";
 import { z } from "zod";
 import { AuthMiddleware, AuthRequest } from "./auth/middleware";
 import { toToken } from "./auth/jwt";
@@ -132,4 +132,16 @@ app.post("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
   } else {
     res.status(500).send(parsedBody.error.flatten());
   }
+});
+
+// GET - List all the items in the user's fridge
+app.get("/fridge", async (req, res) => {
+  const products = await prisma.productOnUser.findMany();
+  res.send(products);
+});
+
+// GET - List of all available recipes
+app.get("/available-recipes", async (req, res) => {
+  const availableRecipes = await prisma.productOnRecipe.findMany();
+  res.send(availableRecipes);
 });
