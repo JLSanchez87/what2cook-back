@@ -24,7 +24,7 @@ model Product {
   productname     String
   portionSize     Int
   ProductOnRecipe ProductOnRecipe[]
-  ProductOnUser   ProductOnUser[]
+  Fridge          ProductOnUser[]
 }
 
 model ProductOnUser {

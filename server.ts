@@ -109,28 +109,49 @@ app.post("/login", async (req, res) => {
 
 // POST - Add Item to User
 const addProductOnUserValidator = z.object({
-  userId: z.number().int(),
-  productId: z.number().int(),
-  productCount: z.number().int(),
+  productId: z.array(z.number().int()),
 });
 
 app.post("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
   const requestBody = req.body;
+  let userThatMadeRequest = Number(req.userId);
+
+  console.log(requestBody);
+  // Only the productId from the body data
   const parsedBody = addProductOnUserValidator.safeParse(requestBody);
-  if (parsedBody.success) {
+
+  // Set user ID in the backend only, so we need to acquire the userId from our Middleware
+  const parsedUserId = z.number().safeParse(userThatMadeRequest);
+  if (parsedBody.success && parsedUserId.success) {
+    console.log(parsedBody);
     try {
-      const newFridgeItem = await prisma.productOnUser.create({
-        data: parsedBody.data,
-      });
-      if (!req.userId) {
-        res.status(500).send({ message: "Something went wrong!" });
+      // Loop over the array recieved in the requestBody
+      for (let i = 0; i < parsedBody.data.productId.length; i++) {
+        const newFridgeItem = await prisma.productOnUser.create({
+          data: {
+            // Get userId from the parsed data from the Middleware
+            userId: parsedUserId.data,
+            // Get productId from the parsed data from the request body
+            productId: parsedBody.data.productId[i],
+            // hardcoded value
+            productCount: 1,
+          },
+        });
       }
-      res.status(200).send(newFridgeItem);
+
+      if (!req.userId) {
+        res
+          .status(500)
+          .send({ message: "Something went wrong! Not the correct user ID" });
+      }
+      res.status(200).send("Items added");
     } catch (error) {
-      res.status(500).send({ message: "Something went wrong!" });
+      res.status(500).send({ message: "Failed to create fridge item(s)!" });
     }
-  } else {
-    res.status(500).send(parsedBody.error.flatten());
+  } else if (!parsedBody.success) {
+    res.status(400).send(parsedBody.error.flatten());
+  } else if (!parsedUserId.success) {
+    res.status(401).send(parsedUserId.error.flatten());
   }
 });
 
@@ -144,4 +165,10 @@ app.get("/fridge", async (req, res) => {
 app.get("/available-recipes", async (req, res) => {
   const availableRecipes = await prisma.productOnRecipe.findMany();
   res.send(availableRecipes);
+});
+
+// GET - List of all products
+app.get("/products", async (req, res) => {
+  const products = await prisma.product.findMany();
+  res.send(products);
 });
