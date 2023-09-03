@@ -45,12 +45,12 @@ const registrationValidator = z
     username: z.string().nonempty().max(20),
     password: z.string().min(10),
     email: z.string().email({ message: "Invalid email address" }),
-    userImg: z
-      .string()
-      .url({
-        message: "Invalid URL, please use a valid URL or skip this part",
-      })
-      .optional(),
+    // userImg: z
+    //   .string()
+    //   .url({
+    //     message: "Invalid URL, please use a valid URL or skip this part",
+    //   })
+    //   .optional(),
   })
   .strict();
 
