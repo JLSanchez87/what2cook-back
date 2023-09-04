@@ -172,3 +172,69 @@ app.get("/products", async (req, res) => {
   const products = await prisma.product.findMany();
   res.send(products);
 });
+
+// GET - list of all recipes
+app.get("/recipes", async (req, res) => {
+  const recipes = await prisma.recipe.findMany({
+    include: { category: true, ingredients: true },
+  });
+  res.send(recipes);
+});
+
+// GET - random recipe
+app.get("/recipe/random", async (req, res) => {
+  const recipeId = await prisma.recipe.findMany();
+  const randomIndex = Math.floor(Math.random() * recipeId.length);
+  const randomRecipe = recipeId[randomIndex];
+  res.send(randomRecipe);
+});
+
+// GET - user's available recipes
+app.get("/compareProducts", AuthMiddleware, async (req: AuthRequest, res) => {
+  const userId = req.userId;
+  if (userId === undefined) {
+    res.status(500).send({ message: "Something went terribly wrong!" });
+    return;
+  }
+
+  try {
+    // Find all productIds in user's Fridge
+    const userFridge = await prisma.productOnUser.findMany({
+      where: { userId },
+      select: {
+        productId: true,
+      },
+    });
+    console.log(userFridge);
+
+    const recipes = await prisma.recipe.findMany({
+      include: { category: true, ingredients: true },
+    });
+
+    const matchingRecipeIds = [];
+
+    for (const recipe of recipes) {
+      const requiredIngredients = recipe.ingredients;
+      const requiredProductIds = requiredIngredients.map(
+        (reqPId) => reqPId.productId
+      );
+
+      // Check if all required products exist in the user's fridge
+      const allIngredientsInFridge = requiredProductIds.every(
+        (requiredProductId: number) =>
+          userFridge.some(
+            (userProduct) => userProduct.productId === requiredProductId
+          )
+      );
+
+      if (allIngredientsInFridge) {
+        matchingRecipeIds.push(recipe.id);
+      }
+    }
+
+    res.json({ matchingRecipeIds });
+  } catch (error) {
+    console.error("Error: ", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
