@@ -114,38 +114,39 @@ const addProductOnUserValidator = z.object({
 
 app.post("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
   const requestBody = req.body;
-  let userThatMadeRequest = Number(req.userId);
+  const userThatMadeRequest = Number(req.userId);
 
-  console.log(requestBody);
   // Only the productId from the body data
   const parsedBody = addProductOnUserValidator.safeParse(requestBody);
 
   // Set user ID in the backend only, so we need to acquire the userId from our Middleware
   const parsedUserId = z.number().safeParse(userThatMadeRequest);
+
   if (parsedBody.success && parsedUserId.success) {
-    console.log(parsedBody);
     try {
-      // Loop over the array recieved in the requestBody
+      // Clear existing entries for the user
+      await prisma.productOnUser.deleteMany({
+        where: {
+          userId: parsedUserId.data,
+        },
+      });
+
+      // Create new entries for the selected items
       for (let i = 0; i < parsedBody.data.productId.length; i++) {
+        console.log(parsedUserId.data);
+        console.log(parsedBody.data.productId[i]);
         const newFridgeItem = await prisma.productOnUser.create({
           data: {
-            // Get userId from the parsed data from the Middleware
             userId: parsedUserId.data,
-            // Get productId from the parsed data from the request body
             productId: parsedBody.data.productId[i],
-            // hardcoded value
             productCount: 1,
           },
         });
       }
 
-      if (!req.userId) {
-        res
-          .status(500)
-          .send({ message: "Something went wrong! Not the correct user ID" });
-      }
       res.status(200).send("Items added");
     } catch (error) {
+      console.error(error);
       res.status(500).send({ message: "Failed to create fridge item(s)!" });
     }
   } else if (!parsedBody.success) {
