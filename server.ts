@@ -133,8 +133,6 @@ app.post("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
 
       // Create new entries for the selected items
       for (let i = 0; i < parsedBody.data.productId.length; i++) {
-        console.log(parsedUserId.data);
-        console.log(parsedBody.data.productId[i]);
         const newFridgeItem = await prisma.productOnUser.create({
           data: {
             userId: parsedUserId.data,
@@ -206,7 +204,6 @@ app.get("/compare-products", AuthMiddleware, async (req: AuthRequest, res) => {
         productId: true,
       },
     });
-    console.log(userFridge);
 
     const recipes = await prisma.recipe.findMany({
       include: { category: true, ingredients: true },
