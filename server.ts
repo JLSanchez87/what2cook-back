@@ -24,7 +24,7 @@ app.get("/me", AuthMiddleware, async (req: AuthRequest, res) => {
     res.status(500).send({ message: "Something went terribly wrong!" });
     return;
   }
-  const thisUser = await prisma.user.findUnique({
+  const currentUser = await prisma.user.findUnique({
     select: {
       id: true,
       username: true,
@@ -36,7 +36,7 @@ app.get("/me", AuthMiddleware, async (req: AuthRequest, res) => {
       id: userId,
     },
   });
-  res.send(thisUser);
+  res.send(currentUser);
 });
 
 // POST - New user registration
@@ -190,7 +190,7 @@ app.get("/recipe/random", async (req, res) => {
 });
 
 // GET - user's available recipes
-app.get("/compareProducts", AuthMiddleware, async (req: AuthRequest, res) => {
+app.get("/compare-products", AuthMiddleware, async (req: AuthRequest, res) => {
   const userId = req.userId;
   if (userId === undefined) {
     res.status(500).send({ message: "Something went terribly wrong!" });
@@ -232,9 +232,9 @@ app.get("/compareProducts", AuthMiddleware, async (req: AuthRequest, res) => {
       }
     }
 
-    res.json({ matchingRecipeIds });
+    res.send({ matchingRecipeIds });
   } catch (error) {
     console.error("Error: ", error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).send({ error: "Internal server error" });
   }
 });
