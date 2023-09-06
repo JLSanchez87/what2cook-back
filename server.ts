@@ -188,6 +188,33 @@ app.get("/recipe/random", async (req, res) => {
   res.send(randomRecipe);
 });
 
+// GET - recipe detail page
+app.get("/recipes/:recipeId", async (req, res) => {
+  const recipeId = parseInt(req.params.recipeId);
+
+  if (isNaN(recipeId)) {
+    res.status(400).send({ message: "Wrong request! Recipe ID needed!" });
+  } else {
+    const recipeFromDb = await prisma.recipe.findUnique({
+      where: {
+        id: recipeId,
+      },
+      include: {
+        category: true,
+        ingredients: true,
+      },
+    });
+
+    if (recipeFromDb === null) {
+      res
+        .status(400)
+        .send({ mesasge: `Can't find recipe with ID ${recipeId}` });
+    } else {
+      res.send(recipeFromDb);
+    }
+  }
+});
+
 // GET - user's available recipes
 app.get("/compare-products", AuthMiddleware, async (req: AuthRequest, res) => {
   const userId = req.userId;
