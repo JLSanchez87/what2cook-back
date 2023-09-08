@@ -201,7 +201,15 @@ app.get("/recipes/:recipeId", async (req, res) => {
       },
       include: {
         category: true,
-        ingredients: true,
+        ingredients: {
+          include: {
+            product: {
+              select: {
+                productname: true,
+              },
+            },
+          },
+        },
       },
     });
 
