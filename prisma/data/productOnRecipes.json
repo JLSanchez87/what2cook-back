@@ -676,5 +676,161 @@
     "recipeId": 21,
     "productId": 4,
     "recipeCount": 4
+  },
+  {
+    "id": 114,
+    "recipeId": 19,
+    "productId": 171,
+    "recipeCount": 2
+  },
+  {
+    "id": 115,
+    "recipeId": 22,
+    "productId": 37,
+    "recipeCount": 1
+  },
+  {
+    "id": 116,
+    "recipeId": 22,
+    "productId": 6,
+    "recipeCount": 1
+  },
+  {
+    "id": 117,
+    "recipeId": 23,
+    "productId": 3,
+    "recipeCount": 1
+  },
+  {
+    "id": 118,
+    "recipeId": 23,
+    "productId": 10,
+    "recipeCount": 1
+  },
+  {
+    "id": 119,
+    "recipeId": 24,
+    "productId": 57,
+    "recipeCount": 1
+  },
+  {
+    "id": 120,
+    "recipeId": 24,
+    "productId": 14,
+    "recipeCount": 1
+  },
+  {
+    "id": 121,
+    "recipeId": 25,
+    "productId": 35,
+    "recipeCount": 1
+  },
+  {
+    "id": 122,
+    "recipeId": 25,
+    "productId": 24,
+    "recipeCount": 1
+  },
+  {
+    "id": 123,
+    "recipeId": 26,
+    "productId": 57,
+    "recipeCount": 1
+  },
+  {
+    "id": 124,
+    "recipeId": 26,
+    "productId": 24,
+    "recipeCount": 1
+  },
+  {
+    "id": 125,
+    "recipeId": 26,
+    "productId": 46,
+    "recipeCount": 1
+  },
+  {
+    "id": 126,
+    "recipeId": 26,
+    "productId": 34,
+    "recipeCount": 1
+  },
+  {
+    "id": 127,
+    "recipeId": 26,
+    "productId": 75,
+    "recipeCount": 1
+  },
+  {
+    "id": 128,
+    "recipeId": 27,
+    "productId": 108,
+    "recipeCount": 1
+  },
+  {
+    "id": 129,
+    "recipeId": 27,
+    "productId": 109,
+    "recipeCount": 1
+  },
+  {
+    "id": 130,
+    "recipeId": 27,
+    "productId": 115,
+    "recipeCount": 1
+  },
+  {
+    "id": 131,
+    "recipeId": 27,
+    "productId": 106,
+    "recipeCount": 1
+  },
+  {
+    "id": 132,
+    "recipeId": 27,
+    "productId": 6,
+    "recipeCount": 1
+  },
+  {
+    "id": 133,
+    "recipeId": 28,
+    "productId": 14,
+    "recipeCount": 1
+  },
+  {
+    "id": 134,
+    "recipeId": 28,
+    "productId": 116,
+    "recipeCount": 1
+  },
+  {
+    "id": 135,
+    "recipeId": 28,
+    "productId": 21,
+    "recipeCount": 1
+  },
+  {
+    "id": 136,
+    "recipeId": 28,
+    "productId": 37,
+    "recipeCount": 1
+  },
+  {
+    "id": 137,
+    "recipeId": 29,
+    "productId": 3,
+    "recipeCount": 1
+  },
+  {
+    "id": 138,
+    "recipeId": 29,
+    "productId": 20,
+    "recipeCount": 1
+  },
+  {
+    "id": 139,
+    "recipeId": 29,
+    "productId": 117,
+    "recipeCount": 1
   }
 ]
