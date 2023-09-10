@@ -1,53 +1,66 @@
 [
   {
     "id": 1,
-    "categoryname": "Indian",
-    "categoryImg": "indian_cuisine.jpg"
+    "categoryname": "Indian"
   },
   {
     "id": 2,
-    "categoryname": "Italian",
-    "categoryImg": "italian_cuisine.jpg"
+    "categoryname": "Italian"
   },
   {
     "id": 3,
-
-    "categoryname": "Asian",
-    "categoryImg": "asian_cuisine.jpg"
+    "categoryname": "Asian"
   },
   {
     "id": 4,
-    "categoryname": "Mexican",
-    "categoryImg": "mexican_cuisine.jpg"
+    "categoryname": "Mexican"
   },
   {
     "id": 5,
-    "categoryname": "Filipino",
-    "categoryImg": "filipino_cuisine.jpg"
+    "categoryname": "South-East Asian"
   },
   {
     "id": 6,
-    "categoryname": "Mediterranean",
-    "categoryImg": "mediterranean_cuisine.jpg"
+    "categoryname": "Mediterranean"
   },
   {
     "id": 7,
-    "categoryname": "American",
-    "categoryImg": "american_cuisine.jpg"
+    "categoryname": "American"
   },
   {
     "id": 8,
-    "categoryname": "Latin American",
-    "categoryImg": "latin_american_cuisine.jpg"
+    "categoryname": "Latin American"
   },
   {
     "id": 9,
-    "categoryname": "Comfort Food",
-    "categoryImg": "comfort_food.jpg"
+    "categoryname": "Comfort Food"
   },
   {
     "id": 10,
-    "categoryname": "Vegetarian",
-    "categoryImg": "vegetarian_cuisine.jpg"
+    "categoryname": "Vegetarian"
+  },
+  {
+    "id": 11,
+    "categoryname": "Breakfast"
+  },
+  {
+    "id": 12,
+    "categoryname": "Lunch"
+  },
+  {
+    "id": 13,
+    "categoryname": "Dinner"
+  },
+  {
+    "id": 14,
+    "categoryname": "Dessert"
+  },
+  {
+    "id": 15,
+    "categoryname": "Middle-Eastern"
+  },
+  {
+    "id": 16,
+    "categoryname": "African"
   }
 ]
