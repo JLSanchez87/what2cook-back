@@ -154,6 +154,33 @@ app.post("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
   }
 });
 
+// DELETE - Remove Item from User
+const removeProductOnUserValidator = z.object({
+  id: z.array(z.number().int()),
+});
+
+app.delete("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
+  const requestBody = req.body;
+  const parsedBody = removeProductOnUserValidator.safeParse(requestBody);
+
+  if (parsedBody.success) {
+    try {
+      for (let i = 0; i < parsedBody.data.id.length; i++) {
+        await prisma.productOnUser.delete({
+          where: {
+            id: parsedBody.data.id[i],
+          },
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      res.status(500).send({ message: "Failed to remove items from fridge!" });
+    }
+  } else if (!parsedBody.success) {
+    res.status(400).send(parsedBody.error.flatten());
+  }
+});
+
 // GET - List all the items in the user's fridge
 app.get("/fridge", async (req, res) => {
   const products = await prisma.productOnUser.findMany();
