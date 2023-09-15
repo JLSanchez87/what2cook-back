@@ -172,6 +172,7 @@ app.delete("/fridge", AuthMiddleware, async (req: AuthRequest, res) => {
           },
         });
       }
+      res.send({ message: "Items deleted!" });
     } catch (err) {
       console.error(err);
       res.status(500).send({ message: "Failed to remove items from fridge!" });
